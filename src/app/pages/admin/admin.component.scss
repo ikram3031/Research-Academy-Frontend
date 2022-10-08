@@ -1,0 +1,37 @@
+@import'../../../theme/base';
+@import'../../../theme/variables.scss';
+
+.dashboard{
+    display: flex;
+
+    .left{
+        width: 20%;
+        background-color: $color-primary;
+        height: 100vh;
+
+        .navigation{
+            color: #fff;
+            max-width: 60%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 50px auto;
+            font-size: 16px;
+
+            .navigation_button{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 20px;
+                padding: 10px 0 15px 0;
+                border-bottom: 2px solid #587894;
+            }
+        }
+    }
+
+    .right{
+        width: 80%;
+        background-color: $color-bg;
+    }
+}
