@@ -1,15 +1,15 @@
 @import'../../../theme/base';
 @import'../../../theme/variables.scss';
 
-.dashboard{
+.dashboard {
     display: flex;
 
-    .left{
+    .left {
         width: 20%;
         background-color: $color-primary;
         height: 100vh;
 
-        .navigation{
+        .navigation {
             color: #fff;
             max-width: 60%;
             display: flex;
@@ -18,19 +18,42 @@
             margin: 50px auto;
             font-size: 16px;
 
-            .navigation_button{
+            .navigation_button {
+                cursor: pointer;
                 width: 100%;
                 display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                gap: 20px;
+                flex-direction: column;
                 padding: 10px 0 15px 0;
                 border-bottom: 2px solid #587894;
+
+                .navigation_header {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    justify-content: flex-start;
+                }
+
+                .navigation_dropdown {
+                    display: flex;
+                    flex-direction: column;
+                    align-items:flex-start;
+                    gap: 0px;
+                    justify-content: flex-start;
+                    margin: 10px 0;
+                    background-color: #fff;
+                    display: flex;
+                    color: #000;
+
+                    .dropdown{
+                        margin: 10px 20px;
+                    }
+                }
+
             }
         }
     }
 
-    .right{
+    .right {
         width: 80%;
         background-color: $color-bg;
     }

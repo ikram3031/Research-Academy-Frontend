@@ -4,24 +4,72 @@
 
         <div class="navigation">
 
+            <!-- Home -->
             <div class="navigation_button">
-                <i class="fa-solid fa-house icon"></i>
-                <span>Home</span>
+                <div class="navigation_header">
+                    <i class="fa-solid fa-house icon"></i>
+                    <div> Home </div>
+                </div>
+            </div>
+            
+            <!-- Admins -->
+            <div class="navigation_button">
+                <div class="navigation_header">
+                    <i class="fa-solid fa-user-secret"></i>
+                    <div (click)="toggleAdmins()"> Admins </div>
+                </div>
+
+                <ng-container *ngIf="showAdmins">
+                    <div class="navigation_dropdown">
+                        <div routerLink="all-admins" class="dropdown">
+                            All Admins
+                        </div>
+                        <div class="dropdown">
+                            Add Admins
+                        </div>
+                    </div>
+                </ng-container>
+
             </div>
 
+            <!-- Users -->
             <div class="navigation_button">
-                <i class="fa-solid fa-user-secret"></i>
-                <span>Admins</span>
+                <div class="navigation_header">
+                    <i class="fa-solid fa-users"></i>
+                    <div (click)="toggleUsers()"> Users </div>
+                </div>
+
+                <ng-container *ngIf="showUsers">
+                    <div class="navigation_dropdown">
+                        <div routerLink="all-users" class="dropdown">
+                            All Users
+                        </div>
+                        <div class="dropdown">
+                            Add User
+                        </div>
+                    </div>
+                </ng-container>
+
             </div>
 
+            <!-- Papers -->
             <div class="navigation_button">
-                <i class="fa-solid fa-users"></i>
-                <span>Users</span>
-            </div>
+                <div class="navigation_header">
+                    <i class="fa-brands fa-researchgate"></i>
+                    <div (click)="togglePapers()"> Papers </div>
+                </div>
 
-            <div class="navigation_button">
-                <i class="fa-brands fa-researchgate"></i>
-                <span>Papers</span>
+                <ng-container *ngIf="showPapers">
+                    <div class="navigation_dropdown">
+                        <div routerLink="all-users" class="dropdown">
+                            All Users
+                        </div>
+                        <div class="dropdown">
+                            Add User
+                        </div>
+                    </div>
+                </ng-container>
+
             </div>
 
 
@@ -30,7 +78,9 @@
     </div>
     <!-- End Left -->
 
-    <div class="right"></div>
+    <div class="right" [@routeAnim]="prepareRoute(outlet)">
+        <router-outlet #outlet="outlet"></router-outlet>
+    </div>
     <!-- End Right -->
 
 </div>
