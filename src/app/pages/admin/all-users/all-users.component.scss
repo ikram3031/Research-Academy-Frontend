@@ -1,0 +1,24 @@
+@import'../../../../theme/base';
+@import'../../../../theme/variables.scss';
+
+
+.user_table {
+    font-family: $font-en-poppins;  
+
+
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border: 1px solid #d1d1d1;
+        padding: 10px 0;
+
+        .cell{
+            padding: 5px;
+        }
+    }
+}
+
+.heading{
+    font-weight: 600;
+}

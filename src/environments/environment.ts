@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
   name: 'Research Academy',
-  apiBaseLink: 'http://localhost:3000',
-  ftpBaseLink: 'http://localhost:3000',
+  apiBaseLink: 'http://localhost:5000',
+  ftpBaseLink: 'http://localhost:5000',
   appBaseUrl: '/pages/home',
   userBaseUrl: '/pages/home',
   userProfileUrl: '/my-profile',

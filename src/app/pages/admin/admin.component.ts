@@ -10,7 +10,7 @@ import { RouterOutlet } from '@angular/router';
 export class AdminComponent implements OnInit {
 
   // Varialbles
-  public showAdmins:boolean = false;
+  public showAuthors:boolean = false;
   public showUsers:boolean = false;
   public showPapers:boolean = false;
   public buttonName:any = 'Show';
@@ -32,11 +32,11 @@ export class AdminComponent implements OnInit {
   }
 
   // Toggle Nav menu
-  toggleAdmins() {
-    this.showAdmins = !this.showAdmins;
+  toggleAuthors() {
+    this.showAuthors = !this.showAuthors;
 
     // CHANGE THE NAME OF THE BUTTON.
-    if(this.showAdmins)  
+    if(this.showAuthors)  
       this.buttonName = "Hide";
     else
       this.buttonName = "Show";
